@@ -1,32 +1,35 @@
-# Prerequisites
-*.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
 
-# Precompiled Headers
-*.gch
-*.pch
+using namespace std;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
 
-# Fortran module files
-*.mod
-*.smod
+int main()
+{
+	srand(time(NULL));
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
 
-# Executables
-*.exe
-*.out
-*.app
+	int n, c;
+	cout << "Massiv olshemin engizizniz: ";
+	cin >> n;
+
+	int a[100];
+	for (int i = 0; i <n; ++i) {
+		a[i] = rand() % 100;
+		cout << "a[" << i << "]=" << a[i] << endl;
+	}
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = 0; j < n - 1; j++) {
+			if (a[j] > a[j + 1]) {
+				c = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = c;
+							}
+				
+						}
+					}
+					for (int j = 0; j < n; j++) {
+						cout << a[j] << " ";
+					}}
